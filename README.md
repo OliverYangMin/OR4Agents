@@ -29,6 +29,100 @@
 
 ---
 
+## Agent Optimization Problem 最优智能体问题
+人类设计Agent执行某些任务，哪个agent是最好的？
+
+### Mathematical Formulation
+
+$$
+\begin{aligned}
+S^*
+=
+\arg\max_{S\in\mathcal{F}}
+\Big(
+f(S)-P(S)
+\Big)
+\end{aligned}
+$$
+
+where
+
+- **S** : A complete Agent configuration.
+- **S*** : The optimal Agent configuration.
+- **𝓕** : The feasible solution space defined by all hard constraints.
+- **f(S)** : The utility (reward) of Agent **S**.
+- **P(S)** : The penalty induced by soft constraints.
+
+
+# ASP — Agent Search Paradigm (How to search)
+
+We define a general search process over agent configurations:
+
+$$S_t → N(S_t) → Feasibility Filter → Evaluation → Selection → S_{t+1}$$
+
+This includes:
+
+- neighborhood generation
+- black-box evaluation
+- acceptance strategy
+- iterative improvement
+
+👉 ASP defines **how we search the solution space**
+
+---
+
+## 1. ALS — Agent Local Search (How to implement)
+
+ALS is a concrete realization of ASP using local search:
+
+- start from an initial agent
+- explore local neighborhood
+- evaluate candidates
+- iteratively improve solution
+
+👉 ALS is a **metaheuristic solver for AOP**
+
+---
+
+## 2. Solver Family
+
+ALS can be instantiated into multiple classical OR algorithms:
+
+- **ALNS4Agents** — Adaptive Large Neighborhood Search
+- **Tabu4Agents** — Tabu Search with memory
+- **SA4Agents** — Simulated Annealing
+- **HC4Agents** — Hill Climbing
+- **VNS4Agents** — Variable Neighborhood Search
+
+Each solver explores the same AOP but with different search strategies.
+
+---
+
+# Key Insight
+
+OR4Agents decouples Agent systems into three layers:
+
+| Layer | Meaning |
+|------|--------|
+| AOP | Optimization problem definition |
+| ASP | Search paradigm |
+| ALS | Concrete solver |
+
+This separation allows:
+
+- systematic agent design
+- reusable optimization strategies
+- plug-and-play solvers
+
+---
+
+## Role of LLM
+
+In OR4Agents:
+
+- LLM is NOT the optimizer
+- LLM is a **proposal generator**
+
 ## 架构愿景
 
 ```

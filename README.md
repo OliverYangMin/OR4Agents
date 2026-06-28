@@ -1,9 +1,12 @@
 ﻿# OR4Agents
-
+![OR4Agents Logo](docs/logo.png)
+![Python](https://img.shields.io/badge/python-3.10+-blue?style=flat-square&logo=python)
+![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
+![Status](https://img.shields.io/badge/phase-research-orange?style=flat-square)
+![Version](https://img.shields.io/badge/version-0.1.0-lightgrey?style=flat-square)
 > **Operations Research → AI Agents**
 > 
 > 用运筹学与管理科学的思想、模型和算法，重新思考 AI Agent 的架构与行为。
-
 ---
 
 ## 为什么是 OR4Agents？
@@ -113,17 +116,17 @@ This separation allows:
 ## 架构愿景
 
 ```
-┌─────────────────────────────────────────────┐
-│              OR4Agents Framework             │
-├─────────────────────────────────────────────┤
-│  📐 Decision Layer     (MDP / Markov)        │
-│  ⚙️  Optimization Layer  (LP / MILP / Metaheuristics) │
-│  📊 Resource Layer      (Scheduling / Queueing)       │
-│  🎲 Uncertainty Layer   (Stochastic Prog. / Robust)   │
-│  🧠 Strategy Layer      (Game Theory / Mechanism)     │
-├─────────────────────────────────────────────┤
-│  LLM / Tool-Use / Memory / RAG               │
-└─────────────────────────────────────────────┘
++-------------------------------------------------------------+
+¦              OR4Agents Framework             ¦
++-------------------------------------------------------------¦
+¦  📐 Decision Layer     (MDP / Markov)        ¦
+¦  ⚙️  Optimization Layer  (LP / MILP / Metaheuristics) ¦
+¦  📊 Resource Layer      (Scheduling / Queueing)       ¦
+¦  🎲 Uncertainty Layer   (Stochastic Prog. / Robust)   ¦
+¦  🧠 Strategy Layer      (Game Theory / Mechanism)     ¦
++-------------------------------------------------------------¦
+¦  LLM / Tool-Use / Memory / RAG               ¦
++-------------------------------------------------------------+
 ```
 
 OR 层为 Agent 提供结构化决策能力，LLM 层负责语义理解与生成——两者各司其职，而非一方吞并另一方。
@@ -169,7 +172,7 @@ OR 层为 Agent 提供结构化决策能力，LLM 层负责语义理解与生成
 
 ---
 
-## 项目结构 (规划中)
+## 项目结构
 
 ```
 OR4Agents/

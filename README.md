@@ -32,7 +32,7 @@
 
 ---
 
-## Agent Optimization Problem 最优智能体问题
+# Agent Optimization Problem 最优智能体问题
 人类设计Agent执行某些任务，哪个agent是最好的？
 
 ### Mathematical Formulation
